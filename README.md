@@ -2,6 +2,44 @@
 
 FaceChain Verify is a privacy-first evidence verification workspace that turns consented public-web evidence into a tamper-evident blockchain commitment. The proof anchors the integrity of an evidence record, **not a person’s identity**.
 
+## Application Screenshots
+
+### 1. Consent & case creation
+
+![Consent and case creation](docs/screenshots/01-consent.png)
+
+### 2. Browser-local face scan
+
+![Browser-local face scan](docs/screenshots/02-local-scan.png)
+
+### 3. Automated candidate search
+
+![Automated candidate search](docs/screenshots/03-find-candidates.png)
+
+### 4. Evidence workspace overview
+
+![Evidence workspace overview](docs/screenshots/04-overview.png)
+
+### 5. Reverse-search candidates
+
+![Reverse-search candidates](docs/screenshots/05-candidates.png)
+
+### 6. Blockchain anchoring with MetaMask
+
+![Blockchain anchoring with MetaMask](docs/screenshots/06-metamask-anchor.png)
+
+### 7. Human review before anchoring
+
+![Human review before anchoring](docs/screenshots/07-review-candidate.png)
+
+### 8. On-chain integrity boundary
+
+![On-chain integrity boundary](docs/screenshots/08-anchor-integrity.png)
+
+### 9. Audit history
+
+![Audit history](docs/screenshots/09-audit-history.png)
+
 ## Automated Search & Verify workflow
 
 1. The user explicitly consents and selects a supported JPG or PNG image.
