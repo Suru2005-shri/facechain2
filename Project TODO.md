@@ -1,0 +1,137 @@
+# Project TODO
+
+- [x] Premium responsive public landing experience with clear trust-boundary messaging
+- [x] Authenticated workspace for evidence creation, verification, and audit history
+- [x] Explicit consent gate before any face-image processing
+- [x] Secure face-image upload with validation and ephemeral local/browser processing boundary
+- [x] Human-reviewed candidate-match workflow that never labels a match as identity proof
+- [x] Configurable permitted public web/social-search provider interface (DuckDuckGo default plus environment-configured provider adapter)
+- [x] Transparent provider, query method, retrieval time, and match-rationale display
+- [x] Versioned canonical evidence record and deterministic domain-separated SHA-256 digest
+- [x] Wallet-connected EVM testnet anchoring for privacy-minimized digests and technical metadata (requires configured contract address)
+- [x] Visible transaction hash, contract address, network, and explorer links (configurable explorer base)
+- [x] Independent verification with valid, altered, missing, and duplicate evidence states (chain read plus application recomputation)
+- [x] User-owned case records, consent status, evidence metadata, verification history, and audit events
+- [x] Secure storage references with raw biometric data kept off-chain and retention controls (no raw biometric persistence by design; explicit metadata deletion)
+- [x] Role-aware private-workspace access and authenticated database procedures
+- [x] Environment-managed service credentials and no-secret repository policy
+- [x] Input validation, rate limits, safe error handling, and audit logging
+- [x] Security posture center explaining trust boundary, privacy limitations, network status, and proof scope
+- [x] Advanced-model assistance for search-result rationale/anomaly review without sending raw biometric data
+- [x] Solidity ProofRegistry source with privacy-minimized immutable commitments
+- [x] Automated integrity, router, and contract tests (5 test files, 11 tests passing: hashing, contract compilation/privacy, auth, role guards, and rate limits)
+- [x] Deployment configuration and repeatable public-testnet-ready release workflow (scripted compiler/deployer plus documented secure env requirements)
+- [x] README with setup, consent/data-retention policy, architecture, limitations, and demo instructions
+- [x] Visual verification across desktop and mobile layouts
+- [x] Final checkpoint and handoff instructions
+- [x] Inspect skiper31.tsx reference and identify matching reusable interactions
+- [x] Adapt matching reference components to FaceChain Verify styling and semantics
+- [x] Integrate adapted components without weakening consent, privacy, or trust-boundary messaging
+- [x] Validate adapted component behavior on desktop and mobile
+- [x] Test and checkpoint the component adaptation
+- [x] Create reusable FaceChain evidence-verification skill with workflow, trust-boundary, testing, and delivery guidance
+- [x] Validate the reusable skill package with skill-creator checks
+- [x] Add live verification summary data for valid, altered, missing, and duplicate states
+- [x] Add recent audit-event feed to the dashboard and animated state cards
+- [x] Validate, checkpoint, and hand off the skill and dashboard updates
+- [x] Map pasted morphing-dialog reference to privacy-safe evidence details
+- [x] Implement reusable morphing evidence dialog with accessible close and focus behavior
+- [x] Integrate evidence detail dialog into recent cases and audit activity
+- [x] Validate the dialog across desktop and mobile and checkpoint the update
+- [x] Map the supplied morphing-popover reference to an evidence-workflow control
+- [x] Implement the reusable FaceChain morphing popover with accessible project primitives
+- [x] Integrate the popover into evidence creation and validate responsive behavior
+- [x] Test and checkpoint the morphing-popover update
+- [x] Map smooth dialog reference to safe FaceChain workspace actions
+- [x] Implement reusable branded dialog and alert-dialog behavior with existing project primitives
+- [x] Integrate a standard detail dialog and deletion confirmation into the workspace
+- [x] Test, visually verify, and checkpoint the smooth dialog update
+- [x] Inspect motion navigation menu reference and map it to existing workspace routes
+- [x] Implement reusable responsive motion navigation component
+- [x] Replace current mobile navigation while preserving all route actions
+- [x] Test, visually verify, and checkpoint the motion navigation update
+- [x] Map AnimatePresence modes reference to a FaceChain proof-state interaction
+- [x] Implement reusable proof-state animation modes component
+- [x] Integrate the component into the Security Posture experience
+- [x] Test, visually verify, and checkpoint the animation-modes update
+- [x] Inspect and prepare the supplied video background asset
+- [x] Upload the video through the managed web asset pipeline
+- [x] Integrate the video background with readable overlays and reduced-motion fallback
+- [x] Confirm all supplied dialog, popover, motion navigation, telemetry, and AnimatePresence components remain integrated
+- [x] Test, visually verify, and checkpoint the combined video/UI update
+- [x] Diagnose why the uploaded ambient video is not visible in the browser preview (asset loaded; contrast/opacity made it imperceptible)
+- [x] Fix background-video asset loading, layering, and visibility (poster fallback plus stronger media layer)
+- [x] Validate video playback/fallback and readability on desktop and mobile (runtime confirmed readyState 4, paused false, currentTime advancing)
+- [x] Checkpoint the video visibility fix
+- [x] Audit low-contrast text and surfaces over the video background
+- [x] Strengthen global text, muted text, borders, and surface contrast
+- [x] Tune landing and workspace-specific readability treatments
+- [x] Validate desktop/mobile readability and checkpoint the contrast fix
+- [x] Audit clickable controls and existing hover/pressed states
+- [x] Add consistent hover, focus-visible, and pressed feedback across buttons, links, nav items, cards, dialogs, and popovers
+- [x] Preserve reduced-motion behavior and keyboard accessibility
+- [x] Validate interactions on desktop/mobile and checkpoint the hover-feedback update
+- [x] Translate FR-01 through FR-11 into typed server contracts and stage outcomes
+- [x] Add strict image validation for supported formats, unreadable/corrupt files, and size limits
+- [x] Add face detection and single-face gating with explicit zero/multiple-face outcomes
+- [x] Add ephemeral embedding metadata and configurable match-threshold handling without persistent raw biometrics
+- [x] Add genuine provider-backed reverse-image search interface and supported social-platform filtering
+- [x] Add graceful external-service failure states and auditable pipeline-stage logs
+- [x] Complete canonical evidence, SHA-256, blockchain anchoring, and PASS/FAIL verification behavior
+- [x] Update README, secure environment requirements, dependencies, network/address/provider/model reproducibility details (.env.example is intentionally managed through the project environment system)
+- [x] Add requirement-focused tests and checkpoint the backend refactor
+- [x] Replace generic reverse-image endpoint/API-key logic with GoogleLensBrowserProvider
+- [x] Accept only actual Lens result fields and never fabricate match scores or URLs
+- [x] Filter Google Lens results to supported social domains and return normalized candidates
+- [x] Add explicit browser-assisted handoff state when Lens results are not supplied
+- [x] Remove obsolete reverse-image API-key requirements from documentation and configuration
+- [x] Add provider tests, update UI handoff messaging, validate, and checkpoint the Google Lens migration
+- [x] Implement complete browser-assisted Google Lens result capture and resubmission via actual lensResults
+- [x] Remove hardcoded matchScore and ensure AI review never presents fabricated visual similarity
+- [x] Add truthful result states for no input, browser assistance required, no supported social URLs, and normalization failure
+- [x] Add end-to-end tests for browser_assist_required and successful Google Lens normalization
+- [x] Update documentation and save a checkpoint after the Google Lens gaps are resolved
+- [x] Surface normalization_failed separately from no_supported_social_results in the UI
+- [x] Add appRouter pipeline integration tests for browser_assist_required, normalization_failed, and ready states
+- [x] Complete documentation and final checkpoint after the remaining Google Lens gaps are resolved
+- [x] Connect the frontend Create Evidence workflow to the backend pipeline and verify typed response-state rendering
+- [x] Validate the connected Lens capture flow and responsive frontend behavior
+- [x] Save and deliver the connected frontend-backend implementation
+- [x] Add frontend-focused tests for Lens status copy, process-button labeling, and candidate handoff behavior
+- [x] Complete connected-flow validation using the new frontend-focused coverage when authenticated browser access is unavailable
+- [x] Replace manual Google Lens upload and pasted JSON with an automated server-side reverse-search provider
+- [x] Add typed ReverseSearchProvider adapter and server-only provider secret/configuration handling
+- [x] Normalize genuine provider results, filter social candidates, and connect candidates to face matching
+- [x] Replace the Lens UI with a single Search & Verify action and final source/match/blockchain/verification states
+- [x] Verify provider API requirements and current free-tier/development pricing in documentation
+- [x] Add tests for provider configuration errors, genuine result normalization, matching, and end-to-end Search & Verify states
+- [x] Remove provider API credentials from any client-facing pipeline response or returned search URL
+- [x] Add regression coverage proving pipeline responses never expose provider credentials
+- [x] Review attached pasted content and extract actionable requirements
+- [x] Compare attached requirements with the current automated FaceChain Verify implementation
+- [x] Report gaps and proposed changes before applying any modifications
+- [x] Produce a concrete requirement-by-requirement gap matrix covering reverse search, face verification, evidence schema, blockchain flow, UI states, and logging
+- [x] Report the identified gaps and proposed implementation changes to the user before marking the review complete
+- [x] Build and validate the website against the attached TODO specification
+- [x] Verify the current full-stack workflow and responsive website preview
+- [ ] Save and deliver the website checkpoint for review
+- [x] Configure the provided ProofRegistry contract address in the project environment
+- [x] Validate the contract address and blockchain configuration without exposing secrets
+- [ ] Save and deliver the contract configuration checkpoint
+- [x] Add validation that the configured contract and network values are consumed by anchoring and verification flow
+- [x] Add runtime-configuration coverage for contract address usage without exposing secrets
+- [x] Wire shared contract and chain configuration into Connect wallet & anchor
+- [x] Wire shared contract and chain configuration into direct chain verification reads and explorer rendering
+- [x] Add coverage for configured and missing contract/network states in the real workspace flow
+- [x] Route explorer and chain display values through the shared contract configuration helper explicitly
+- [x] Add frontend workspace-flow coverage for configured and missing contract/network states
+- [x] Re-validate anchor and verify paths after the workspace-flow coverage is added
+- [x] Add a component-level test for configured and missing workspace anchor/verify states, disabled/error behavior, and explorer-link rendering
+- [x] Add focused coverage for connectAndAnchor and handleVerify paths using shared configuration
+- [x] Complete final anchor/verify validation only after component or authenticated runtime evidence exists
+- [x] Add VerifyWorkspace-focused coverage for configured and missing contract/network states, error messaging, and explorer/chain display
+- [x] Add focused anchor and verification path contracts proving missing configuration is handled before wallet or chain calls
+- [x] Rerun final anchor and verify validation only after both workspace paths are covered
+- [x] Add a real VerifyWorkspace integration test for verify-mode messaging and configured/missing chain display
+- [x] Add focused tests proving connectAndAnchor and handleVerify return before wallet or contract calls when configuration is missing
+- [x] Rerun and record final anchor/verify validation only after both real workspace paths are covered

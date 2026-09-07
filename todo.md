@@ -1,0 +1,121 @@
+# Project TODO
+
+- [x] Premium responsive public landing experience with clear trust-boundary messaging
+- [x] Authenticated workspace for evidence creation, verification, and audit history
+- [x] Explicit consent gate before any face-image processing
+- [x] Secure face-image upload with validation and ephemeral local/browser processing boundary
+- [x] Human-reviewed candidate-match workflow that never labels a match as identity proof
+- [x] Configurable permitted public web/social-search provider interface (DuckDuckGo default plus environment-configured provider adapter)
+- [x] Transparent provider, query method, retrieval time, and match-rationale display
+- [x] Versioned canonical evidence record and deterministic domain-separated SHA-256 digest
+- [x] Wallet-connected EVM testnet anchoring for privacy-minimized digests and technical metadata (requires configured contract address)
+- [x] Visible transaction hash, contract address, network, and explorer links (configurable explorer base)
+- [x] Independent verification with valid, altered, missing, and duplicate evidence states (chain read plus application recomputation)
+- [x] User-owned case records, consent status, evidence metadata, verification history, and audit events
+- [x] Secure storage references with raw biometric data kept off-chain and retention controls (no raw biometric persistence by design; explicit metadata deletion)
+- [x] Role-aware private-workspace access and authenticated database procedures
+- [x] Environment-managed service credentials and no-secret repository policy
+- [x] Input validation, rate limits, safe error handling, and audit logging
+- [x] Security posture center explaining trust boundary, privacy limitations, network status, and proof scope
+- [x] Advanced-model assistance for search-result rationale/anomaly review without sending raw biometric data
+- [x] Solidity ProofRegistry source with privacy-minimized immutable commitments
+- [x] Automated integrity, router, and contract tests (5 test files, 11 tests passing: hashing, contract compilation/privacy, auth, role guards, and rate limits)
+- [x] Deployment configuration and repeatable public-testnet-ready release workflow (scripted compiler/deployer plus documented secure env requirements)
+- [x] README with setup, consent/data-retention policy, architecture, limitations, and demo instructions
+- [x] Visual verification across desktop and mobile layouts
+- [x] Final checkpoint and handoff instructions
+- [x] Inspect skiper31.tsx reference and identify matching reusable interactions
+- [x] Adapt matching reference components to FaceChain Verify styling and semantics
+- [x] Integrate adapted components without weakening consent, privacy, or trust-boundary messaging
+- [x] Validate adapted component behavior on desktop and mobile
+- [x] Test and checkpoint the component adaptation
+- [x] Create reusable FaceChain evidence-verification skill with workflow, trust-boundary, testing, and delivery guidance
+- [x] Validate the reusable skill package with skill-creator checks
+- [x] Add live verification summary data for valid, altered, missing, and duplicate states
+- [x] Add recent audit-event feed to the dashboard and animated state cards
+- [x] Validate, checkpoint, and hand off the skill and dashboard updates
+- [x] Map pasted morphing-dialog reference to privacy-safe evidence details
+- [x] Implement reusable morphing evidence dialog with accessible close and focus behavior
+- [x] Integrate evidence detail dialog into recent cases and audit activity
+- [x] Validate the dialog across desktop and mobile and checkpoint the update
+- [x] Map the supplied morphing-popover reference to an evidence-workflow control
+- [x] Implement the reusable FaceChain morphing popover with accessible project primitives
+- [x] Integrate the popover into evidence creation and validate responsive behavior
+- [x] Test and checkpoint the morphing-popover update
+- [x] Map smooth dialog reference to safe FaceChain workspace actions
+- [x] Implement reusable branded dialog and alert-dialog behavior with existing project primitives
+- [x] Integrate a standard detail dialog and deletion confirmation into the workspace
+- [x] Test, visually verify, and checkpoint the smooth dialog update
+- [x] Inspect motion navigation menu reference and map it to existing workspace routes
+- [x] Implement reusable responsive motion navigation component
+- [x] Replace current mobile navigation while preserving all route actions
+- [x] Test, visually verify, and checkpoint the motion navigation update
+- [x] Map AnimatePresence modes reference to a FaceChain proof-state interaction
+- [x] Implement reusable proof-state animation modes component
+- [x] Integrate the component into the Security Posture experience
+- [x] Test, visually verify, and checkpoint the animation-modes update
+- [x] Inspect and prepare the supplied video background asset
+- [x] Upload the video through the managed web asset pipeline
+- [x] Integrate the video background with readable overlays and reduced-motion fallback
+- [x] Confirm all supplied dialog, popover, motion navigation, telemetry, and AnimatePresence components remain integrated
+- [x] Test, visually verify, and checkpoint the combined video/UI update
+- [x] Diagnose why the uploaded ambient video is not visible in the browser preview (asset loaded; contrast/opacity made it imperceptible)
+- [x] Fix background-video asset loading, layering, and visibility (poster fallback plus stronger media layer)
+- [x] Validate video playback/fallback and readability on desktop and mobile (runtime confirmed readyState 4, paused false, currentTime advancing)
+- [x] Checkpoint the video visibility fix
+- [x] Audit low-contrast text and surfaces over the video background
+- [x] Strengthen global text, muted text, borders, and surface contrast
+- [x] Tune landing and workspace-specific readability treatments
+- [x] Validate desktop/mobile readability and checkpoint the contrast fix
+- [x] Audit clickable controls and existing hover/pressed states
+- [x] Add consistent hover, focus-visible, and pressed feedback across buttons, links, nav items, cards, dialogs, and popovers
+- [x] Preserve reduced-motion behavior and keyboard accessibility
+- [x] Validate interactions on desktop/mobile and checkpoint the hover-feedback update
+- [x] Translate FR-01 through FR-11 into typed server contracts and stage outcomes
+- [x] Add strict image validation for supported formats, unreadable/corrupt files, and size limits
+- [x] Add face detection and single-face gating with explicit zero/multiple-face outcomes
+- [x] Add ephemeral embedding metadata and configurable match-threshold handling without persistent raw biometrics
+- [x] Add genuine provider-backed reverse-image search interface and supported social-platform filtering
+- [x] Add graceful external-service failure states and auditable pipeline-stage logs
+- [x] Complete canonical evidence, SHA-256, blockchain anchoring, and PASS/FAIL verification behavior
+- [x] Update README, secure environment requirements, dependencies, network/address/provider/model reproducibility details (.env.example is intentionally managed through the project environment system)
+- [x] Add requirement-focused tests and checkpoint the backend refactor
+- [x] Replace generic reverse-image endpoint/API-key logic with GoogleLensBrowserProvider
+- [x] Accept only actual Lens result fields and never fabricate match scores or URLs
+- [x] Filter Google Lens results to supported social domains and return normalized candidates
+- [x] Add explicit browser-assisted handoff state when Lens results are not supplied
+- [x] Remove obsolete reverse-image API-key requirements from documentation and configuration
+- [x] Add provider tests, update UI handoff messaging, validate, and checkpoint the Google Lens migration
+- [x] Implement complete browser-assisted Google Lens result capture and resubmission via actual lensResults
+- [x] Remove hardcoded matchScore and ensure AI review never presents fabricated visual similarity
+- [x] Add truthful result states for no input, browser assistance required, no supported social URLs, and normalization failure
+- [x] Add end-to-end tests for browser_assist_required and successful Google Lens normalization
+- [x] Update documentation and save a checkpoint after the Google Lens gaps are resolved
+- [x] Surface normalization_failed separately from no_supported_social_results in the UI
+- [x] Add appRouter pipeline integration tests for browser_assist_required, normalization_failed, and ready states
+- [x] Complete documentation and final checkpoint after the remaining Google Lens gaps are resolved
+- [x] Fix the restored VerifyWorkspace JSX runtime compatibility issue reported by the existing blockchain-flow test (React is undefined at render time)
+
+- [x] Restore the completed FaceChain Verify source from the supplied archive into the editable workspace
+- [x] Run the restored deterministic feature suite: 13 test files and 36 tests passed, including pipeline states, normalization, credential non-disclosure, contract compilation/privacy, and anchor/verify guards
+- [x] Run type-check and production build on the restored source
+- [x] Verify responsive Search & Verify workspace rendering at desktop and mobile widths
+- [x] Confirm current runtime logs show the recovered server running and no new post-fix runtime errors
+- [x] Run the live SerpApi account-check test with the configured server-only SERPAPI_API_KEY
+
+- [x] Configure SEPOLIA_RPC_URL for server-side chain operations
+- [x] Configure PRIVATE_KEY securely for deployment/anchoring operations without client exposure
+- [x] Configure VITE_CONTRACT_ADDRESS for workspace anchoring and verification surfaces
+- [x] Validate Sepolia configuration, contract address consumption, and private-key non-disclosure
+- [x] Save an updated checkpoint after blockchain configuration
+
+- [x] Add the supplied 1000051128.mp4 asset as the website background with readable overlays and reduced-motion fallback
+- [x] Validate video background rendering on desktop and mobile and rerun tests/build
+- [x] Save an updated checkpoint after the video-background integration
+
+- [x] Package the current tested FaceChain Verify workspace as a complete ZIP archive
+- [x] Verify the ZIP contents and deliver the archive for download
+
+- [ ] Rebuild the project ZIP without secret-bearing `.project-config.json` metadata
+- [ ] Verify the sanitized ZIP contains no managed secrets or private-key material
+- [ ] Deliver the sanitized ZIP as a downloadable attachment
